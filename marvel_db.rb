@@ -1,5 +1,5 @@
 require 'marvel_api'
-
+require 'pry'
 # Class: Marvel_db
 # A database of marvel comics and characters.
 #
@@ -10,6 +10,7 @@ require 'marvel_api'
 # #search
 
 class Marvel_db
+  attr_accessor :client
   def initialize
     @client = Marvel::Client.new
 
@@ -33,10 +34,9 @@ class Marvel_db
 
   def search(query)
     @client.characters(name: query)
-    binding.pry
   end
   
 end#classend
-
+binding.pry
 
   
