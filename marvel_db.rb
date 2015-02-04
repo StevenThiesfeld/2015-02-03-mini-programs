@@ -1,5 +1,13 @@
-require 'pry'
 require 'marvel_api'
+
+# Class: Marvel_db
+# A database of marvel comics and characters.
+#
+# Attributes:
+# @client  - Marvel::Client : gives access to marvel's database with an API key
+#
+# public methods:
+# #search
 
 class Marvel_db
   def initialize
@@ -10,11 +18,25 @@ class Marvel_db
       config.private_key = '8145779d67b193e6d3a7da2b7d1df809804b7ca8'
     end
   end
+  
+  # Method: #search
+  # Searches the database for the user's query.
+  #
+  # Parameters:
+  # query  -  String: the search input from user.
+  #
+  # returns:
+  # Hashie: the results from database.
+  #
+  # State Changes:
+  # none
 
-  def search(name)
-    @client.characters(name: name)
+  def search(query)
+    @client.characters(name: query)
+    binding.pry
   end
-end
+  
+end#classend
 
 
   
