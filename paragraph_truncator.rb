@@ -1,10 +1,30 @@
 require 'active_support'
 require 'active_support/core_ext/string/filters.rb'
 
+# Class: Truncator
+# Runs active_support's truncate method.
+#
+#Attributes: none
+#
+# public methods
+# #truncate
+
 class Truncator
-  def truncate(x, y)
-    x.to_s.truncate(y.to_i)
+  
+  # Method: #truncate
+  # Truncates the paragraph given.
+  #
+  # Parameters:
+  # text        -  String:  What is going to be truncated.
+  # cut_off     -  Integer: The number of characters printed before it cuts off.
+  #
+  # Returns:
+  # String: the truncated string.
+  #
+  # State Changes:
+  # none
+  
+  def truncate(text, cut_off)
+    text.truncate(cut_off)
   end
 end
-test = Truncator.new
-puts test.truncate("yeah i guess i just figured it would eliminate the need for deleting the last comma if you actually added to the array's final element, but I suppose there are more than two ways to skin a cat", 20)
