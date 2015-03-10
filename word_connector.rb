@@ -1,5 +1,3 @@
-require 'active_support'
-require 'active_support/core_ext/array/conversions.rb'
 
 # Class: Word Connector
 # Connects an array of strings into a single sentence string.

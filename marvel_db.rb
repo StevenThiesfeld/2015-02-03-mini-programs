@@ -1,5 +1,4 @@
-require 'marvel_api'
-require 'pry'
+
 # Class: Marvel_db
 # A database of marvel comics and characters.
 #

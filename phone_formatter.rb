@@ -1,5 +1,3 @@
-require 'active_support'
-require 'active_support/core_ext/numeric/conversions'
  
 # Class: Phone_Formatter
 # Formats a string of numbers into a phone number.

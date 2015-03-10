@@ -1,5 +1,4 @@
-require 'active_support'
-require 'active_support/core_ext/string/filters.rb'
+
 
 # Class: Truncator
 # Runs active_support's truncate method.
